@@ -18,15 +18,13 @@ else:
     print('[X] 檢查 Data 資料夾是否有 Homework.txt 檔名之檔案')
 
 
-f = ''
-
 with open("./Data/Homework.txt", "w") as fh:
     fh.write('Hello World')
 
 try:
     with open("./Data/Homework.txt", "r") as fh:
         f=fh.read()
-except EnvironmentError: # parent of IOError, OSError *and* WindowsError where available
+except EnvironmentError: 
     pass
 
 
