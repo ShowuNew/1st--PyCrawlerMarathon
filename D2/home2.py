@@ -11,13 +11,13 @@ urllib.request.urlretrieve(res, './data/example.csv')
 
 
 #open(WAVE_FILE, "r",encoding="utf-8")
-fh = open("./data/example.csv","r",encoding="utf-8")
+#fh = open("./data/example.csv","r",encoding="utf-8")
 
-f = fh.read()
+#f = fh.read()
 #str1 = fh.read(10)
-fh.close()
+#fh.close()
 
-print(f)
+#print(f)
 
 
 
@@ -25,8 +25,24 @@ with open('./data/example.csv', newline='',encoding="utf-8") as csvfile:
     # 讀取 CSV 檔案內容
     rows = csv.reader(csvfile)
     # 以迴圈輸出每一列
+    
+    #for row in rows:
+    #    print(row)
+    listem=[]
+    licount=['班次1','班次2','班次3','班次4','班次5']
+    aa = -1
     for row in rows:
-        print(row)
+      if '班次1' in row:
+        for index,item in enumerate(row):
+            if '班次1' == item:
+                aa = index
+                print(aa)
+      elif aa !=-1:
+        listem.append(row[aa])
+        print(row[aa])
+
+    #print(listem)
+   
 
 #print('111')
 
