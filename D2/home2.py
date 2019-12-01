@@ -21,30 +21,51 @@ urllib.request.urlretrieve(res, './data/example.csv')
 
 
 
-with open('./data/example.csv', newline='',encoding="utf-8") as csvfile:
+#with open('./data/example.csv', newline='',encoding="utf-8") as csvfile:
     # 讀取 CSV 檔案內容
-    rows = csv.reader(csvfile)
+    #rows = csv.reader(csvfile)
     # 以迴圈輸出每一列
     
     #for row in rows:
     #    print(row)
-    listem=[]
-    licount=['班次1','班次2','班次3','班次4','班次5']
-    aa = -1
-    for row in rows:
-      if '班次1' in row:
-        for index,item in enumerate(row):
-            if '班次1' == item:
-                aa = index
-                print(aa)
-      elif aa !=-1:
-        listem.append(row[aa])
-        print(row[aa])
+    # listem=[]
+    # licount=['班次1','班次2','班次3','班次4','班次5']
+    # aa = -1
+    # for row in rows:
+    #   if '班次1' in row:
+    #     for index,item in enumerate(row):
+    #         if '班次1' == item:
+    #             aa = index
+    #             print(aa)
+    #   elif aa !=-1:
+    #     listem.append(row[aa])
+    #     print(row[aa])
 
     #print(listem)
    
-
-#print('111')
+ 
+   
+listem=[]
+licount=['班次1','班次2','班次3','班次4','班次5']
+data={}
+aa = -1
+for li in licount:
+    with open('./data/example.csv', newline='',encoding="utf-8") as csvfile:
+         # 讀取 CSV 檔案內容
+        rows = csv.reader(csvfile)
+        for row in rows:
+              if li in row:
+                  for index,item in enumerate(row):
+                        if li == item:
+                            aa = index
+              elif aa !=-1:
+                  listem.append(row[aa])
+                  
+        data[li]=listem[1:]
+        aa=-1
+        listem=[]
+        #print(li)
+print(data)
 
 
 # 打开文件
