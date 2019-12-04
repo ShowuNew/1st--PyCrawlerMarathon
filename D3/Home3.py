@@ -1,6 +1,6 @@
 import xml.dom.minidom
 import xml.etree.ElementTree as ET
-#import xmltodict
+import xmltodict
 
 ##下載檔案
 # 下載檔案
@@ -20,22 +20,22 @@ dirs = os.listdir( './data' )
 
 # 输出所有文件和文件夹
 
-for file in dirs:
-    #print(file)
-    a="./data/"+file
-    #print(os.path.splitext(file)[1])
-    #if os.path.splitext(file)[1]==".xml":
-    #   # if file=="09007_Week24_CH.xml" :
-    #   doc = xml.dom.minidom.parse("./data/"+file)
-    if os.path.splitext(file)[1]==".xml":
-        with open(a, "r",encoding="utf-8") as fdd:
-            xml = fdd.read()
-            if "高雄"  in xml:
-                data.append(file)
-       
-    #print(a)  
-
-print(data) 
+##for file in dirs:
+##    #print(file)
+##    a="./data/"+file
+##    #print(os.path.splitext(file)[1])
+##    #if os.path.splitext(file)[1]==".xml":
+##    #   # if file=="09007_Week24_CH.xml" :
+##    #   doc = xml.dom.minidom.parse("./data/"+file)
+##    if os.path.splitext(file)[1]==".xml":
+##        with open(a, "r",encoding="utf-8") as fdd:
+##            xml = fdd.read()
+##            if "高雄"  in xml:
+##                data.append(file)
+##       
+##    #print(a)  
+##
+##print(data) 
         
 # 讀檔案
 #fh = open("./data/64_72hr_CH.xml", "r",encoding="utf-8")
@@ -81,3 +81,12 @@ print(data)
 #chapters = doc['CUPOY']['Chapters']['Chapter']
 #for chapter in chapters:
 #    print (chapter['@name'], chapter['#text'])
+with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
+    d = dict(xmltodict.parse(fd.read()))
+    #datasetDescription = d['cwbopendata']['dataset']['datasetInfo']['datasetDescription']
+    #datasetDescription=len(d['cwbopendata']['dataset']['locations']['location'])
+    datasetDescription=(d['cwbopendata']['dataset']['locations']['location'])
+    
+    #print(datasetDescription)
+    for dd in datasetDescription:
+        print(dd)
