@@ -81,12 +81,15 @@ dirs = os.listdir( './data' )
 #chapters = doc['CUPOY']['Chapters']['Chapter']
 #for chapter in chapters:
 #    print (chapter['@name'], chapter['#text'])
-with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
-    d = dict(xmltodict.parse(fd.read()))
-    #datasetDescription = d['cwbopendata']['dataset']['datasetInfo']['datasetDescription']
-    #datasetDescription=len(d['cwbopendata']['dataset']['locations']['location'])
-    datasetDescription=(d['cwbopendata']['dataset']['locations']['location'])
-    
-    #print(datasetDescription)
-    for dd in datasetDescription:
-        print(dd)
+#with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
+#    d = dict(xmltodict.parse(fd.read()))
+#    #datasetDescription = d['cwbopendata']['dataset']['datasetInfo']['datasetDescription']
+#    #datasetDescription=len(d['cwbopendata']['dataset']['locations']['location'])
+#    datasetDescription=(d['cwbopendata']['dataset']['locations']['location'])
+#    
+#    #print(datasetDescription)
+#    for dd in datasetDescription:
+#        name = dd.get('locationName')
+#        time = dd.get('weatherElement')[0].get('time')[0].get('dataTime')
+#        temperature = dd.get('weatherElement')[0].get('time')[0].get('elementValue').get('measures') + ' ' +dd.get('weatherElement')[0].get('time')[0].get('elementValue').get('value')
+#        print(name+ time+ temperature)
