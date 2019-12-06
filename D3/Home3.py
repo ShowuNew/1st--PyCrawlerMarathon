@@ -93,3 +93,16 @@ dirs = os.listdir( './data' )
 #        time = dd.get('weatherElement')[0].get('time')[0].get('dataTime')
 #        temperature = dd.get('weatherElement')[0].get('time')[0].get('elementValue').get('measures') + ' ' +dd.get('weatherElement')[0].get('time')[0].get('elementValue').get('value')
 #        print(name+ time+ temperature)
+
+with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
+    d = dict(xmltodict.parse(fd.read()))
+    datasetDescription=(d['cwbopendata']['dataset']['locations']['location'][0])
+    dd2=datasetDescription['weatherElement'][0]['time']
+    for dd3 in dd2:
+        time=dd3['dataTime']
+        temperature=dd3['elementValue'].get('measures') +'  '+ dd3['elementValue'].get('value')
+        print(time + ' ' +temperature)
+
+        
+
+
