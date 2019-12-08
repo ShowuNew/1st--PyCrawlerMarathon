@@ -6,7 +6,7 @@ import xmltodict
 # 下載檔案
 #import urllib.request
 #import zipfile
-##下載檔案
+#下載檔案
 #res = "http://opendata.cwb.gov.tw/govdownload?dataid=F-D0047-093&authorizationkey=rdec-key-123-45678-011121314"
 #urllib.request.urlretrieve(res, "./data/example.zip")
 #f = zipfile.ZipFile('./data/example.zip')
@@ -71,16 +71,21 @@ dirs = os.listdir( './data' )
 ##第三種
 # 存取檔案
 
-#with open('./data/sample.xml', "r",encoding="utf-8") as fd:
-#    doc = dict(xmltodict.parse(fd.read()))
-#
-## 存取我們的資訊
-#print(doc['CUPOY']['Title'])
+with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
+    doc = dict(xmltodict.parse(fd.read()))
+    
+# 存取我們的資訊
+print(doc)
 #
 ## 用迴圈存取我們的資訊
 #chapters = doc['CUPOY']['Chapters']['Chapter']
 #for chapter in chapters:
 #    print (chapter['@name'], chapter['#text'])
+
+#with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
+#       d = dict(xmltodict.parse(fd.read()))
+#       datasetDescription=len(d['cwbopendata']['dataset']['locations']['location'])
+#       print(datasetDescription)
 #with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
 #    d = dict(xmltodict.parse(fd.read()))
 #    #datasetDescription = d['cwbopendata']['dataset']['datasetInfo']['datasetDescription']
@@ -93,16 +98,16 @@ dirs = os.listdir( './data' )
 #        time = dd.get('weatherElement')[0].get('time')[0].get('dataTime')
 #        temperature = dd.get('weatherElement')[0].get('time')[0].get('elementValue').get('measures') + ' ' +dd.get('weatherElement')[0].get('time')[0].get('elementValue').get('value')
 #        print(name+ time+ temperature)
-
-with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
-    d = dict(xmltodict.parse(fd.read()))
-    datasetDescription=(d['cwbopendata']['dataset']['locations']['location'][0])
-    dd2=datasetDescription['weatherElement'][0]['time']
-    for dd3 in dd2:
-        time=dd3['dataTime']
-        temperature=dd3['elementValue'].get('measures') +'  '+ dd3['elementValue'].get('value')
-        print(time + ' ' +temperature)
-
+##
+#with open('./data/64_72hr_CH.xml', "r",encoding="utf-8") as fd:
+#    d = dict(xmltodict.parse(fd.read()))
+#    datasetDescription=(d['cwbopendata']['dataset']['locations']['location'][0])
+#    dd2=datasetDescription['weatherElement'][0]['time']
+#    for dd3 in dd2:
+#        time=dd3['dataTime']
+#        temperature=dd3['elementValue'].get('measures') +'  '+ dd3['elementValue'].get('value')
+#        print(time + ' ' +temperature)
+#
         
 
 
