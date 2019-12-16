@@ -18,9 +18,22 @@ sum_commentCount=0
 sum_likeCount=0
 # 3. 計算熱門/非熱門文章的「平均留言人數」與「平均按讚人數」
 for i in data:
-    sum_commentCount+=i["commentCount"]
-    sum_likeCount+=i["likeCount"]
+    sum_commentCount+=int(i["commentCount"])
+    sum_likeCount+=int(i["likeCount"])
 
 
-print(sum_commentCount)
-print(sum_likeCount)
+print(sum_commentCount/len(data))
+print(sum_likeCount/len(data))
+
+r = requests.get('https://www.dcard.tw/_api/forums/pet/posts?popular=false')
+data = json.loads(r.text)
+
+sum_commentCount=0
+sum_likeCount=0
+for n in data:
+    sum_commentCount+=int(n["commentCount"])
+    sum_likeCount+=int(n["likeCount"])
+
+
+print(sum_commentCount/len(data))
+print(sum_likeCount/len(data))
