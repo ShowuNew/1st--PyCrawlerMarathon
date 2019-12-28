@@ -5,8 +5,14 @@
     * 介紹影片不適合太長(20秒內)
 
 * APP 工具
-    * 手繪APP
+    * 手繪APP(https://marvelapp.com/pop/)
 
+* 企業規範 CIS
+* 網站規範 WIS
+
+2019-12-20
+===
 
 2019-12-28
 ===
+japan web design (https://responsive-jp.com/)
