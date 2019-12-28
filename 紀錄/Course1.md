@@ -46,3 +46,4 @@ learning:Key word 「greensock easing」(https://greensock.com/docs/v2/Easing)
     * 圖片壓檔PNG(https://tinypng.com/)
     * robots.txt
     * similarWeb-網站分析
+    * APG、PTP 修圖軟體
