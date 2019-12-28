@@ -26,6 +26,17 @@ learning:Key word 「greensock easing」(https://greensock.com/docs/v2/Easing)
  ![全家範例](https://www.evernote.com/shard/s515/sh/77acdf90-34fe-438e-a45b-34d153c9ac49/0ad873a2a18659884cc2b33d991932d0/res/37e49546-0965-4824-9e9a-a8c02e1e5ac8/圖片.png=50)
 
  
+ FB OG DEBUG(https://developers.facebook.com/tools/debug/sharing/)
+
+  #### GA
+  工作階段
+  跳出率
+  行為裡面事件
+  
 * 其他補充 
     * Google Search Console
+    網站完成可以確認
+    * AMP GOOGLE
+    loading 快內容輕
     * font awesome
+    * 功能分流
