@@ -28,7 +28,7 @@ learning:Key word 「greensock easing」(https://greensock.com/docs/v2/Easing)
  
  FB OG DEBUG(https://developers.facebook.com/tools/debug/sharing/)
 
-  #### GA
+  #### GA-Gtag
   工作階段
   跳出率
   行為裡面事件
@@ -40,3 +40,8 @@ learning:Key word 「greensock easing」(https://greensock.com/docs/v2/Easing)
     loading 快內容輕
     * font awesome
     * 功能分流
+    * BrowserSlack-模擬測試
+    * PageSpeed
+    * 圖片壓檔PNG(https://tinypng.com/)
+    * robots.txt
+    * similarWeb-網站分析
