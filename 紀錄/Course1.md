@@ -15,4 +15,8 @@
 
 2019-12-28
 ===
-japan web design (https://responsive-jp.com/)
+補充：japan web design (https://responsive-jp.com/)
+learning:Key word 「greensock easing」(https://greensock.com/docs/v2/Easing)
+
+#SEO
+ ##micro data
