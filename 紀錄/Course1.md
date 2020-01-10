@@ -44,6 +44,33 @@ learning:Key word 「greensock easing」(https://greensock.com/docs/v2/Easing)
     * BrowserSlack-模擬測試
     * PageSpeed
     * 圖片壓檔PNG(https://tinypng.com/)
-    * robots.txt
+    * robots.txt,SiteMap
     * similarWeb-網站分析
     * APG、PTP 修圖軟體
+
+2020-1-10
+===
+
+前後端可以透過 json 傳資料去完成
+主要前後端可以同時開發
+
+如果大量API
+1.json 可以用排程bulid
+2.直接讀，例外可以吃bulid 出的json
+
+
+## SEO
+
+
+* 工具
+    * CKEditor
+    * dotdotdot(https://dotdotdot.frebsite.nl/)
+    * drop zone(yoink)
+    * parallax js
+    * hashbang #!
+    * D3
+    * WebGL
+    * Tree.js
+    
+
+
