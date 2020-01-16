@@ -92,7 +92,24 @@ SA 介紹
     -Winform 
 ### Client 設定檔(使用DA)
     -大量查詢(較為特殊)
-### XML 的介紹
+### XML 的介紹(DA)
+    - 環境宣告
+    DbConfig一對多Project一對多Module
+    Schema   Class  Def
+    - 操作執行
+    DataInstance ColumnList QueryInterance SPInterance
+### Clinet 寫法
+    -Module(類別新增)
+    -DI 使用
+    parameter 清除
+    給條件，撈回(問同一批資料被撈到不同的Client端)，放入Module 再放入datatable
+    -QI 使用
+    可以直接放入 Datatable
+    -PI 使用
+ ### 下午實作   
+
+
+
  
 
 
