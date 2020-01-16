@@ -71,6 +71,17 @@ learning:Key word 「greensock easing」(https://greensock.com/docs/v2/Easing)
     * D3
     * WebGL
     * Tree.js
+
+2020-1-16
+===
+SA 介紹
+
+### 兩層 軟體架構三層式 優缺點
+### 商業邏輯處理模式
+ 
+
+
+
     
 
 
